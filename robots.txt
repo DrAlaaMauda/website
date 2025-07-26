@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://abobakrhassan2024.github.io/Alaa-Mauda/sitemap.xml
