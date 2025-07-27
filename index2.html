@@ -42,8 +42,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
- 
-<link rel="stylesheet" href="style.css"> 
+
   <title>الموقع الرسمي للدكتور علاء معوضة - طب وجراحة الفم والأسنان</title>
 
   <!-- JSON-LD لتعريف بيانات المنظمة ووسائل التواصل -->
@@ -76,21 +75,7 @@
     "areaServed": "تعز، اليمن"
   }
   </script>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "د. علاء ياسين معوضه",
-    "url": "https://dralaamauda.github.io/website/",
-    "sameAs": [
-      "https://www.facebook.com/YourFacebookPage",
-      "https://www.instagram.com/YourInstagramProfile",
-      "https://twitter.com/YourTwitterHandle"
-    ]
-  }
-  </script>
-
+ 
 
 
 
@@ -146,7 +131,177 @@
             }
         }
     </script>
-  
+    <style>
+        /* تحسين الخط والقراءة */
+body { 
+    font-family: 'Cairo', sans-serif; 
+    line-height: 1.6;
+}
+
+/* تحسين Skeleton */
+.skeleton {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.2s linear infinite;
+    will-change: background-position;
+}
+.dark .skeleton {
+    background: linear-gradient(90deg, #374151 25%, #4b5563 50%, #374151 75%);
+}
+
+/* زر طافي - بدون أداء ثقيل */
+.floating-btn {
+    animation: float 3s ease-in-out infinite;
+    will-change: transform;
+}
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+/* دخول تدريجي */
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* كروت الخدمات */
+.service-card {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+.service-card:hover {
+    transform: translateY(-5px);
+}
+.service-card:focus {
+    outline: 2px solid #5D5CDE;
+    outline-offset: 2px;
+}
+
+/* صفحات النظام */
+.page {
+    display: none;
+}
+.page.active {
+    display: block;
+    animation: slideInUp 0.4s ease-out;
+}
+
+/* تحميل الصور التدريجي */
+.lazy-load {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+.lazy-load.loaded {
+    opacity: 1;
+}
+
+/* سلايدر قبل/بعد */
+.before-after-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+}
+.before-after-slider {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #5D5CDE;
+    cursor: ew-resize;
+    z-index: 10;
+}
+.slider-handle {
+    position: absolute;
+    top: 50%;
+    left: -10px;
+    width: 20px;
+    height: 20px;
+    background: #5D5CDE;
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+
+/* الروابط */
+.nav-link {
+    position: relative;
+}
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: #5D5CDE;
+    transition: width 0.3s ease;
+    transform: translateX(-50%);
+}
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* الآلة الحاسبة */
+.calculator-card {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+/* الأسئلة الشائعة */
+.faq-item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.faq-item:hover {
+    transform: translateX(-4px);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+/* شريط التقدم */
+.progress-bar {
+    height: 4px;
+    background: linear-gradient(90deg, #5D5CDE, #00B4D8);
+    border-radius: 2px;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: progress 1.5s ease-out forwards;
+}
+@keyframes progress {
+    to { transform: scaleX(1); }
+}
+
+/* التحميل */
+.loading {
+    pointer-events: none;
+    opacity: 0.6;
+}
+.spinner {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid #5D5CDE;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* تقليل الحركة عند الحاجة */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+    </style>
  <link rel="sitemap" type="application/xml" title="Sitemap" href="https://dralaamauda.github.io/website/sitemap.xml" />
 
 
