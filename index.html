@@ -61,54 +61,70 @@
  
 
 
-  <!-- JSON-LD لتعريف بيانات المنظمة ووسائل التواصل -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Dentist",
-    "name": "عيادة الدكتور علاء ياسين معوضه",
-    "description": "خدمات زراعة الأسنان، تبييض، تقويم، تجميل، وعلاج أمراض اللثة في تعز، اليمن.",
-    "image": "https://dralaamauda.github.io/website/img/Alaa_logo.jpg",
-    "telephone": "+967777252400",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "عقبة شارع جمال، أسفل مطعم السعيد",
-      "addressLocality": "تعز",
-      "addressCountry": "YE"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 13.5755326,
-      "longitude": 44.016005
-    },
-    "openingHours": "Sa-Th 09:00-21:00",
-    "priceRange": "متوسط",
-    "url": "https://dralaamauda.github.io/website/",
-    "hasMap": "https://maps.app.goo.gl/Q9quX3WrbgfCnqWe6",
-    "paymentAccepted": ["Cash", "Credit Card"],
-    "currenciesAccepted": "YER, SAR",
-    "availableLanguage": ["ar"],
-    "areaServed": "تعز، اليمن"
-  }
-  </script>
- <script type="application/ld+json">
+ <!-- JSON-LD: بيانات العيادة والطبيب -->
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "د. علاء ياسين معوضه",
-  "jobTitle": "طبيب أسنان",
-  "worksFor": {
-    "@type": "Dentist",
-    "name": "عيادة الدكتور علاء ياسين معوضه",
-    "url": "https://dralaamauda.github.io/website/"
-  },
+  "@type": "Dentist",
+  "@id": "https://dralaamauda.github.io/website/#organization",
+  "name": "عيادة الدكتور علاء ياسين معوضه",
+  "description": "خدمات زراعة الأسنان، تبييض، تقويم، تجميل، وعلاج أمراض اللثة في تعز، اليمن.",
+  "image": "https://dralaamauda.github.io/website/img/Alaa_logo.jpg",
   "url": "https://dralaamauda.github.io/website/",
+  "telephone": "+967777252400",
+  "email": "contact@mauda.dental.clinic",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "عقبة شارع جمال، أسفل مطعم السعيد",
+    "addressLocality": "تعز",
+    "addressCountry": "YE"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 13.5755326,
+    "longitude": 44.016005
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Saturday",
+        "Sunday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday"
+      ],
+      "opens": "09:00",
+      "closes": "21:00"
+    }
+  ],
+  "priceRange": "متوسط",
+  "paymentAccepted": ["Cash", "Credit Card"],
+  "currenciesAccepted": "YER, SAR",
+  "availableLanguage": ["ar"],
+  "areaServed": "تعز، اليمن",
+  "hasMap": "https://maps.app.goo.gl/Q9quX3WrbgfCnqWe6",
   "sameAs": [
     "https://www.facebook.com/dr.alaa.y.mauda.clinic",
     "https://www.instagram.com/dr.alaa.y.mauda.clinic"
-  ]
+  ],
+  "employee": {
+    "@type": "Person",
+    "name": "د. علاء ياسين معوضه",
+    "image": "https://dralaamauda.github.io/website/img/alaa_profile.jpg",
+    "jobTitle": "طبيب أسنان",
+    "url": "https://dralaamauda.github.io/website/",
+    "email": "contact@mauda.dental.clinic",
+    "telephone": "+967777252400",
+    "sameAs": [
+      "https://www.facebook.com/dr.alaa.y.mauda.clinic",
+      "https://www.instagram.com/dr.alaa.y.mauda.clinic"
+    ]
+  }
 }
 </script>
+
 
 
 
